@@ -26,7 +26,33 @@ def Protein_Calories():
             Quantity=py.inputFloat('How many glass of milk you drink\n')
             Calories_intake+=(calories*Quantity)
             Protein_intake+=(protein*Quantity)
-    return Calories_intake and Protein_intake
+        elif food.lower()=='banana shake':
+            calories=food_calories.get('banana shake')
+            protein=food_protein.get('banana shake')
+            Quantity=py.inputFloat('How many ')
+            Calories_intake+=(calories*Quantity)
+            Protein_intake+=(protein*Quantity)
+        elif food.lower()=='dry fruits':
+            calories=food_calories.get('dry fruits')
+            protein=food_protein.get('dry fruits')
+            Quantity=py.inputFloat('')
+            Calories_intake+=(calories*Quantity)
+            Protein_intake+=(protein*Quantity)
+        elif food.lower()=='sattu':
+            calories=food_calories.get('sattu')
+            protein=food_protein.get('sattu')
+            Quantity=py.inputFloat('How many Tea spoon\n')
+            Calories_intake+=(calories*Quantity)
+            Protein_intake+=(protein*Quantity)
+        elif food.lower()=='eggs':
+            calories=food_calories.get('eggs')
+            protein=food_calories.get('eggs')
+            Quantity=py.inputFloat('How many eggs you ate')
+            Calories_intake+=(calories*Quantity)
+            protein_intake+=(protein*Quantity)
+        elif food.lower()=='cooked rice':
+            calories==''
+    return Calories_intake,Protein_intake
 if option==1:
     print("List of Food items and there calories:",food_calories)
     print()
