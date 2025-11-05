@@ -8,7 +8,14 @@ food_calories={'roti':106,
                'eggs':78,
                'cooked rice':130,
                'kala channa':3.6}
-food_protein={'roti':3.84,'milk':7.7,'banana shake':14.5,'dry fruits':3.65,'sattu':2.5,'eggs':6.3,'cooked rice':2.7,'kala channa':0.21}
+food_protein={'roti':3.84,
+              'milk':7.7,
+              'banana shake':14.5,
+              'dry fruits':3.65,
+              'sattu':2.5,
+              'eggs':6.3,
+              'cooked rice':2.7,
+              'kala channa':0.21}
 print('''\n                           Calories and Protein Calculator.\n        
      1. Enter 1 to know your calories and Protein intake
      2. Enter 0 to exit ''')
@@ -67,8 +74,8 @@ def Protein_Calories():
             Quantity=py.inputFloat('How many grams:')
             Calories_intake+=(calories*Quantity)
             Protein_intake+=(protein*Quantity)
-        elif food.lower=='':
-            pass
+        else:
+            print('This food item is not in the list')
     return Calories_intake,Protein_intake
 if option==1:
     print("List of Food items and there calories:",food_calories)
