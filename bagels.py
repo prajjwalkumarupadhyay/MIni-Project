@@ -37,10 +37,17 @@ def result():
                 print('fermi')
             else:
                 print('Pico')
-        if GuessedDigit not in Secretdigit:
-            print('Bagels')
+        all_condition=True
+        for d in GuessedDigit:
+            if d in Secretdigit:
+                all_condition=False
+                break
+            if all_condition:
+                print('Bagels') 
         if i>=10:
             print('chances over:')
             break
-    print(SecretNumber)
+    print('The number I was thinking:')
+    return SecretNumber
 print(result())
+
