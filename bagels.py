@@ -13,7 +13,7 @@ for d in str(SecretNumber):
     Secretdigit.append(int(d))
 print('I have thought up a number.')
 print('You have 10 guesses to get it.')
-def result():
+def play_game():
     print("Guess the number or type 'exit' to end the Game.")
     for i in range(1,11):
         GuessedNumber=input()
@@ -43,11 +43,16 @@ def result():
                 all_condition=False
                 break
             if all_condition:
-                print('Bagels') 
+                print('Bagel')
         if i>=10:
             print('chances over:')
             break
-    print('The number I was thinking:')
-    return SecretNumber
-print(result())
+    print('The number I was thinking:',SecretNumber)
+while True:
+    play_game()
+    again=input('Do you want to continue playing this game.')
+    if again.lower()=='yes':
+        continue
+    else:
+        break
 
