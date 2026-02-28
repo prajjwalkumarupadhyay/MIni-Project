@@ -1,5 +1,5 @@
 #This Program calculates your total calories and protein intake
-import sys,pyinputplus as py
+import sys 
 food_calories={'roti':106,
                'milk':149,
                'banana shake':375,
@@ -19,7 +19,7 @@ food_protein={'roti':3.84,
 print('''\n                           Calories and Protein Calculator.\n        
      1. Enter 1 to know your calories and Protein intake
      2. Enter 0 to exit ''')
-option=py.inputInt()
+option=input()
 def Protein_Calories():
     print('Enter food items you ate today or type \'exit\' to Exit')
     Calories_intake=0
@@ -31,13 +31,13 @@ def Protein_Calories():
         if food.lower()=='roti':
             calories=food_calories.get('roti')
             protein=food_protein.get('roti')
-            Quantity=py.inputFloat('How many Roti you ate:')
+            Quantity=input('How many Roti you ate:')
             Calories_intake+=(calories*Quantity)
             Protein_intake+=(protein*Quantity)
         elif food.lower()=='milk':
             calories=food_calories.get('milk')
             protein=food_protein.get('milk')
-            Quantity=py.inputFloat('How many glass of milk you drink:')
+            Quantity=input('How many glass of milk you drink:')
             Calories_intake+=(calories*Quantity)
             Protein_intake+=(protein*Quantity)
         elif food.lower()=='banana shake':
@@ -53,25 +53,25 @@ def Protein_Calories():
         elif food.lower()=='sattu':
             calories=food_calories.get('sattu')
             protein=food_protein.get('sattu')
-            Quantity=py.inputFloat('How many Tea spoon:')
+            Quantity=input('How many Tea spoon:')
             Calories_intake+=(calories*Quantity)
             Protein_intake+=(protein*Quantity)
         elif food.lower()=='eggs':
             calories=food_calories.get('eggs')
             protein=food_protein.get('eggs')
-            Quantity=py.inputFloat('How many eggs you ate:')
+            Quantity=input('How many eggs you ate:')
             Calories_intake+=(calories*Quantity)
             Protein_intake+=(protein*Quantity)
         elif food.lower()=='cooked rice':
             calories=food_calories.get('cooked rice')
             protein=food_protein.get('cooked rice')
-            Quantity=py.inputFloat('How many grams you ate:')
+            Quantity=input('How many grams you ate:')
             Calories_intake+=(calories*Quantity)
             Protein_intake+=(protein*Quantity)
         elif food.lower()=='kala channa':
             calories=food_calories.get('kala channa')
             protein=food_protein.get('kala channa')
-            Quantity=py.inputFloat('How many grams:')
+            Quantity=input('How many grams:')
             Calories_intake+=(calories*Quantity)
             Protein_intake+=(protein*Quantity)
         else:
