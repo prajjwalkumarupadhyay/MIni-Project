@@ -43,7 +43,8 @@ def choose():
     #print(odd_month)
     #print(odd_days)
     total=(odd_days+odd_month+odd_year)%7
-    print('It was ',str(Days[total]),f" on {date}/{month}/{year}.")
+    return total
+    #print('It was ',str(Days[total]),f" on {date}/{month}/{year}.")
     option=input(('Do you want to start again. Enter YES to continue otherwise space.\n'))
     if option.upper()=="YES":
         choose()
