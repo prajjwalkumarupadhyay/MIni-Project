@@ -9,7 +9,7 @@ print('''i am thinking of a 3-digit number . Try to guess what it is.
       Bagels             No digit is correct ''')
 SecretNumber=random.randint(100,999)
 Secretdigit=[]
-for d in str(SecretNumber):
+for d in str(SecretNumber): 
     Secretdigit.append(int(d))
 print('I have thought up a number.')
 print('You have 10 guesses to get it.')
