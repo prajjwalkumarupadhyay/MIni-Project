@@ -1,11 +1,15 @@
-print('''This Program tracks and maintain your attendance
-      
-      What do you want to know :
-      1. Your Attendance percentage.
-      2. To know how many more holidays you can take.''')
-lectures={'monday':5,'tuesday':6,'wedneday':4,'thursday':6,'friday':5,'saturday':5}
-
-if 
-        
+#You can input Your attendance here
+def Attendance():
+      while True:
+        try:
+            attended_lectures=int(input('Enter your total attended lectures\n'))
+        except ValueError:
+            print('Error: Please Enter Valid Input. The entered input Should be integer.')
+            continue
+        try:
+            scheduled_classes=int(input('Total no of classes scheduled\n'))
+        except ValueError:
+            print('Error: The entered input Should be integer.')
+            continue
+        return attended_lectures,scheduled_classes
     
-get_int_value=input()
