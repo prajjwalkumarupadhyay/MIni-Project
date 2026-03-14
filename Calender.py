@@ -31,11 +31,21 @@ def choose():
             return odd_days
     def Date():
         odd_days=date%7
-        return odd_days           
-    print('Enter Date, Month and Year in integer.')
-    date=int(input('Date - '))
-    month=int(input('Month - '))
-    year=int(input('Year - '))
+        return odd_days  
+    def correct():
+        pass
+                 
+    try:
+        date=int(input('Date - '))
+        correct()
+        month=int(input('Month - '))
+        if month>12:
+            print('Month cannot be more than 12.Enter correct input')
+            choose()
+        year=int(input('Year - '))
+    except ValueError:
+        print('Error: Date, Month and Year should be integer.Enter Again.')
+        choose()
     odd_year=Year()
     odd_month=Month()
     odd_days=Date()
@@ -43,11 +53,12 @@ def choose():
     #print(odd_month)
     #print(odd_days)
     total=(odd_days+odd_month+odd_year)%7
-    return str(Days[total])
-    #print('It was ',str(Days[total]),f" on {date}/{month}/{year}.")
+    #return str(Days[total])
+    print('It was ',str(Days[total]),f" on {date}/{month}/{year}.")
     option=input(('Do you want to start again. Enter YES to continue otherwise space.\n'))
     if option.upper()=="YES":
         choose()
     else:
         sys.exit('Have a nice day!😄')
-#choose()
+print('Enter Date, Month and Year in integer.')
+choose()
