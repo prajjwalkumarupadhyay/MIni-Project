@@ -33,8 +33,7 @@ def choose():
         odd_days=date%7
         return odd_days  
     def correct():
-        pass
-                 
+        pass        
     try:
         date=int(input('Date - '))
         correct()
