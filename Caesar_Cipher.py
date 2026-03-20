@@ -4,11 +4,11 @@ def choose():
     def shift():
         while True:
             try:
-                shift=int(input('Please enter the key (o to 25) to use.\n'))
-                if 0<=shift<=25:
+                shift=int(input('Please enter the key (1 to 25) to use.\n'))
+                if 1<=shift<=25:
                     return shift
                 else:
-                    print('The value should be b/w (0-25).')
+                    print('The value should be b/w (1-25).')
             except ValueError:
                 print('Error:Input must be an integer.')
     def encrypt():
@@ -16,16 +16,26 @@ def choose():
         msg=input('Enter the message you want to encrypt.\n')
         new=msg.upper().split()
         old=''.join(new)
-        if old.isaplha() is False:
+        if old.isalpha() is False:
             print('Error: The message should only contains alphabets.Please enter message in alphabets.')
             encrypt()
+        store=[]
         for i in new:
+            new=[]
             for j in i:
-                pass
+                index=Alpha.index(j)
+                index+=move
+                new.append(Alpha[index])
+            word=''.join(new)
+            store.append(word)
+        sentence=' '.join(store)
+        return sentence
     while True:
         option=input('Do you want to (e)ncrypt or (d)ecrypt ?\n')
         if option.lower()=='e':
             move=shift()
+            sentence=encrypt()
+            print(sentence)
         elif option.lower()=='d':
             pass
         else:
