@@ -35,8 +35,6 @@ def choose():
         sentence=' '.join(store)
         return sentence
     def decrypt():
-        def Re_Evaluate2():
-            pass
         Alpha=list(string.ascii_uppercase)
         msg=input('Enter the message you want to decrypt.\n')
         new=msg.upper().split()
