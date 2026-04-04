@@ -1,6 +1,7 @@
 import sys
 def choose():
     Days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+    month30=[4,6,9,11]
     def Year():
         def century():
             if (x//100==0):
@@ -36,12 +37,26 @@ def choose():
         pass        
     try:
         date=int(input('Date - '))
-        correct()
+        if date>31:
+            print('Error: There can be at max 31 days in a month.Enter again.')
+            choose()
         month=int(input('Month - '))
         if month>12:
             print('Month cannot be more than 12.Enter correct input')
-            choose()
+        if month in month30:
+            if date>30:
+                print('Error:This Month can not have more than 30 days')
+                choose()
+        if (month==2):
+            if date>29:
+                print('Error:February cannot have more than 29 days. Enter again')
+                choose()
         year=int(input('Year - '))
+        if month==2:
+            if year%4!=0:
+                if date>28:
+                    print('This year isnt leap year. So february cannot have more than 28 days.Enter again')
+                    choose()
     except ValueError:
         print('Error: Date, Month and Year should be integer.Enter Again.')
         choose()
