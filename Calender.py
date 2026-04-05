@@ -37,26 +37,24 @@ def choose():
         pass        
     try:
         date=int(input('Date - '))
-        if date>31:
-            print('Error: There can be at max 31 days in a month.Enter again.')
-            choose()
         month=int(input('Month - '))
-        if month>12:
-            print('Month cannot be more than 12.Enter correct input')
+        year=int(input('Year - '))
+        if date>31 or month>12:
+            print('Invalid Input')
+            choose()
         if month in month30:
             if date>30:
-                print('Error:This Month can not have more than 30 days')
+                print('Invalid input')
                 choose()
         if (month==2):
             if date>29:
-                print('Error:February cannot have more than 29 days. Enter again')
+                print('Invalid input')
                 choose()
-        year=int(input('Year - '))
         if month==2:
             if year%4!=0:
                 if date>28:
-                    print('This year isnt leap year. So february cannot have more than 28 days.Enter again')
-                    choose()
+                    print('Invalid Input')
+                    choose()   
     except ValueError:
         print('Error: Date, Month and Year should be integer.Enter Again.')
         choose()
