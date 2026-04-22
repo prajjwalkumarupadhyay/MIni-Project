@@ -61,9 +61,6 @@ def choose():
     odd_year=Year()
     odd_month=Month()
     odd_days=Date()
-    #print(odd_year)
-    #print(odd_month)
-    #print(odd_days)
     total=(odd_days+odd_month+odd_year)%7
     #return str(Days[total])
     print('It was ',str(Days[total]),f" on {date}/{month}/{year}.")
