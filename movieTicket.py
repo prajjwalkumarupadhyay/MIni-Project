@@ -1,3 +1,4 @@
+# Uncomment the return function in Calender before using this program 
 import sys
 def ticket():
     try:
@@ -17,11 +18,11 @@ def ticket():
             print('Error: age should be in integer. Enter name and age again.')
             continue
         ind[key]=value
-    #print(ind)
+    print(ind)
     def Price():
         print('For which day do you want the tickets.')
         import Calender
-        day=Calender.choose()
+        day=Calender
         price=0
         for i in ind.values():
             if i <18:
