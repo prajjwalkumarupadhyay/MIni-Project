@@ -10,7 +10,6 @@ def main():
                 sys.exit('Error: Unable to access the website. Please check the URL and try again.')
             soup=BeautifulSoup(res.text,'html.parser')
             text=soup.get_text()
-            Regex() #Note: Many websites will block or slow down your request , as prevention.
             def Regex():
                 number=re.compile(r'''\+91\s?\d{5}\s?\d{5}| #India
                                 \+1\s?\(\d{3}\)\s?\d{3}-\d{4}| #USA/Canada
@@ -25,5 +24,7 @@ def main():
                 result2=Email.findall(text)
                 print(result1)
                 print(result2)
+            Regex()  #Note: Many websites will block or slow down your request , as prevention.
             #under Development
+        WebSite()
 main()
